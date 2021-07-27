@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+          <!-- Axentix CSS minified version -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.3.2/dist/css/axentix.min.css">
+<!-- Grix system -->
+{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.3.2/dist/css/grix.min.css"> #}
+        {% endblock %}
+
+        {% block javascripts %}
+          <!-- Axentix JS minified version -->
+<script src="https://cdn.jsdelivr.net/npm/axentix@1.3.2/dist/js/axentix.min.js"></script>
+        {% endblock %}
+    </head>
+    <body>
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Starter template - Axentix</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.3.2/dist/css/axentix.min.css" />
+  </head>
+
+  <body class="layout">
+    <header>
+      <nav class="navbar shadow-1 primary">
+        <button class="btn rounded-1 white hide-md-up sidenav-trigger small mr-2" data-target="main-sidenav">
+          Menu
+        </button>
+        <a href="#" target="_blank" class="navbar-brand">Mairie Tiv</a>
+        <div class="navbar-menu ml-auto">
+          <a class="navbar-link active hide-sm-down" href="#">Link 1</a>
+          <a class="navbar-link hide-sm-down" href="{{ path('security_login') }}">Connexion</a>
+          <a class="navbar-link hide-sm-down" href="{{ path('security_registration') }}">Inscription</a>
+          <div id="navbar-dropdown" data-ax="dropdown" class="dropdown" data-dropdown-prevent-viewport="true">
+            <a class="navbar-link dropdown-trigger" href="#">Dropdown</a>
+            <div class="dropdown-content white shadow-1 right-aligned">
+              <a class="dropdown-item" href="#">Item 1</a>
+              <a class="dropdown-item" href="#">Item 2</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="sidenav white shadow-1" id="main-sidenav" data-ax="sidenav">
+      <div class="sidenav-header">
+        <img src="https://useaxentix.com/img/axentix.svg" alt="" class="sidenav-logo" />
+      </div>
+
+      <a href="#" class="sidenav-link active">Link 1</a>
+      <a href="#" class="sidenav-link">Link 2</a>
+      <a href="#" class="sidenav-link">Link 3</a>
+    </div>
+
+    <main>
+      <h1 class="txt-center font-w300 mx-2">Hello from Axentix !</h1>
+
+      <div class="container mt-5">
+        <div class="card rounded-2 shadow-1">
+          <div class="card-header">Material form example</div>
+
+          <div class="card-content">
+            <form class="form-material">
+              <div class="grix xs1 sm2">
+                <div class="form-field">
+                  <label for="firstname">Firstname</label>
+                  <input type="text" class="form-control" id="firstname" />
+                </div>
+                <div class="form-field">
+                  <label for="firstname">Lastname</label>
+                  <input type="text" class="form-control" id="firstname" placeholder="Toto" />
+                </div>
+              </div>
+
+              {# <button type="button" class="btn rounded-1 press secondary mx-auto mt-4">Submit</button> #}
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="grix xs1 sm2 md3 lg4">
+  <div>box 1</div>
+  <div class="pos-sm1 col-sm2 pos-row-sm1 pos-md2 col-md1">box 2</div>
+  <div>box 3</div>
+</div>
+    </main>
+
+    <footer class="footer primary">
+      Copyright © 2021 - Example
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axentix@1.3.2/dist/js/axentix.min.js"></script>
+  </body>
+</html>
+        <div class="container">
+        {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>
